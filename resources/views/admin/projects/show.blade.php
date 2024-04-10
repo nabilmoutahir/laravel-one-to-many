@@ -4,15 +4,22 @@
 
     <section>
 
+        
+
         <div class="container">
 
-        <h1>{{$project->id}}: {{$project->title}}</h1>
+            <h1>{{$project->id}}: {{$project->title}}</h1>
 
-        <h2 class="mt-4">Description:</h2>
-        <div>
-            {{$project->content}}
-        </div>
-         
+            <h2 class="mt-4">Description:</h2>
+            <div>
+                {{$project->content}}
+            </div>
+
+            <a href="{{ route('admin.projects.index') }}">
+                <div class="btn btn-primary my-4">
+                    <- Back to the index
+                </div>
+            </a>
         </div>
 
     </section>
