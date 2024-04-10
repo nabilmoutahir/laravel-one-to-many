@@ -13,6 +13,7 @@
                         <th>Title</th>
                         <th>Slug</th>
                         <th>Content</th>
+                        <th>Type</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -22,7 +23,7 @@
                             <td>{{ $project->title}}</td>
                             <td>{{ $project->slug}}</td>
                             <td>{{ $project->content}}</td>
-
+                            <td>{{ $project->type->label ?? '' }}</td>
                             <td>
                                 <a href="{{ route('admin.projects.show', $project) }}">Details</a>
                             </td>
