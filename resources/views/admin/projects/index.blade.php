@@ -24,6 +24,10 @@
                             <td>{{ $project->content}}</td>
 
                             <td>
+                                <a href="{{ route('admin.projects.show', $project) }}">Details</a>
+                            </td>
+
+                            <td>
                                 <form action="{{ route('admin.projects.destroy', $project) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
