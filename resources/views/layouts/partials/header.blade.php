@@ -27,6 +27,12 @@
               <a class="nav-link" href="{{ route('admin.projects.index') }}">Index</a>
             </li>
 
+            {{-- CREATE --}}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('admin.projects.create') }}">Create</a>
+            </li>
+
+            {{-- USER --}}
             <li class="nav-item dropdown">
               <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
                 href="#" id="navbarDropdown" role="button" v-pre>
