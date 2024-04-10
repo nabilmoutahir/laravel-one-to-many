@@ -31,11 +31,19 @@ Route::middleware('auth')
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])
       ->name('dashboard');
 
-      // routes
+    // INDEX
     Route::resource('projects', ProjectController::class);
 
-    Route::get('admin/projects/{project}', [ProjectController::class, 'show'])->name('admin.projects.show');
+    // CREATE
+    Route::get('/comics/create', [ProjectController::class, 'create'])->name('admin.projects.create');
 
+    // SHOW
+    Route::get('admin/projects/create', [ProjectController::class, 'show'])->name('admin.projects.show');
+
+    // STORE
+    Route::post('admin/projects', [ProjectController::class, 'store'])->name('admin.projects.store');
+
+    // DESTROY
     Route::delete('admin/projects/{project}', [ProjectController::class, 'destroy'])->name('project.destroy');
 
   });
