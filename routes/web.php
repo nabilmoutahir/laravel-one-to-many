@@ -34,6 +34,8 @@ Route::middleware('auth')
       // routes
     Route::resource('projects', ProjectController::class);
 
+    Route::get('admin/projects/{project}', [ProjectController::class, 'show'])->name('admin.projects.show');
+
     Route::delete('admin/projects/{project}', [ProjectController::class, 'destroy'])->name('project.destroy');
 
   });
