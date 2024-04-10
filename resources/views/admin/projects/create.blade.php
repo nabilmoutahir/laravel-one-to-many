@@ -30,7 +30,12 @@
 
       <div class="col-12">
           <label class="form-label" for="title">Title</label>
-          <input class="form-control" type="text" name="title" id="">
+          <input class="form-control" type="text" name="title" id="title">
+      </div>
+
+      <div class="col-12">
+          <label class="form-label" for="slug">SLug</label>
+          <input class="form-control" type="text" name="slug" id="slug">
       </div>
 
       <div class="col-12">
